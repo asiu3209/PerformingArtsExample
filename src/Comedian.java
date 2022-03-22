@@ -34,7 +34,9 @@ public class Comedian extends Performer
     //      "Performing for an audience! Performance #1"
     // followed by each joke in jokes on a new line
 
-
+    public void perform(){
+        System.out.println("Performing for an audience! Performace #1");
+    }
 
 
 
@@ -52,27 +54,14 @@ public class Comedian extends Performer
     }
 
     // OVERLOADED rehearse method -- not overridden
-    public void rehearse(boolean fullRehearsal)
-    {
-        if (fullRehearsal)
-        {
-            for (String joke : jokes)
-            {
-                System.out.println(joke);
-            }
-        }
-        else
-        {
-            rehearse();
-        }
-    }
-//   public void rehearse(boolean performAfter)
-//   {
-//     rehearse();
-//
-//     if (performAfter)
-//     {
-//       this.perform();
-//     }
-//   }
+
+   public void rehearse(boolean performAfter)
+   {
+     rehearse();
+
+     if (performAfter)
+     {
+       this.perform();
+     }
+   }
 }
